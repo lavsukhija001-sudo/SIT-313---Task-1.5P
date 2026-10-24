@@ -1,0 +1,1003 @@
+
+/* Global Styles */
+
+html,
+body,
+#root {
+    margin: 0;
+    min-height: 100%;
+    background-color: #000000;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+}
+
+
+/* Navigation Bar */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 75px;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    background-color: #202020;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav input {
+    flex: 1;
+    max-width: 300px;
+    padding: 10px 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: auto;
+}
+
+.nav-right button {
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    padding: 5px 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* Banner */
+
+.banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+.banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Banner Hover Message */
+
+.banner-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    padding: 18px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease,
+                transform 0.3s ease;
+    pointer-events: none;
+}
+
+.banner:hover .banner-text {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+/* About Section */
+
+.about {
+    position: relative;
+    padding: 50px 20px;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+}
+
+.about h1,
+.about h2,
+.about p {
+    color: #ffffff;
+}
+
+/* Profile Picture */
+
+#about img,
+.about img {
+    display: block;
+    width: 280px;
+    height: 280px;
+    margin: 20px auto;
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 6px 25px rgba(255, 255, 255, 0.15);
+}
+
+.about p {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+
+/* Work and Projects */
+
+.work {
+    padding: 50px 20px;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.project {
+    width: 280px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #202020;
+    color: #ffffff;
+}
+
+.project img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.project p {
+    color: #ffffff;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+
+/* Gallery */
+
+.gallery {
+    padding: 50px 20px;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+/* Contact Section */
+
+.contact {
+    padding: 50px 20px;
+    background-color: #285f63;
+    color: #ffffff;
+    text-align: center;
+}
+
+.contact h1,
+.contact h2,
+.contact h3,
+.contact p,
+.contact a {
+    color: #ffffff;
+}
+
+.contact p {
+    line-height: 1.6;
+}
+
+
+/* Newsletter Signup */
+
+.signup {
+    padding: 50px 20px;
+    background-color: #285f63;
+    color: #ffffff;
+    text-align: center;
+}
+
+.signup h1,
+.signup h2,
+.signup h3,
+.signup p,
+.signup label {
+    color: #ffffff;
+}
+
+.signup form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.signup input {
+    width: 300px;
+    padding: 12px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #222222;
+    font-size: 16px;
+}
+
+.signup button {
+    padding: 12px 20px;
+    background-color: #ffffff;
+    color: #285f63;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.signup button:hover {
+    background-color: #dcecec;
+}
+
+#message {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+
+/* Featured Articles */
+
+.featured-section {
+    padding: 50px 20px;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+}
+
+.featured-section h2 {
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-size: 32px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.article-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0 0 20px;
+    background-color: #202020;
+    color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+}
+
+.article-card img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    margin: 0;
+    object-fit: cover;
+    object-position: center;
+}
+
+.article-card h3 {
+    margin: 20px 15px 12px;
+    color: #ffffff;
+    font-size: 21px;
+    line-height: 1.4;
+}
+
+.article-card p {
+    margin: 0 18px 15px;
+    color: #dddddd;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* Featured Tutorials */
+
+.tutorials-section {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.tutorials-section .card-container {
+    max-width: 1400px;
+    gap: 24px;
+}
+
+.tutorials-section .article-card {
+    padding-bottom: 22px;
+    border-radius: 14px;
+}
+
+
+
+.tutorials-section .article-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    background-color: #202020;
+    object-fit: contain;
+    object-position: center;
+}
+
+
+/* Footer */
+
+footer {
+    padding: 15px;
+    background-color: #222222;
+    color: #ffffff;
+    text-align: center;
+}
+
+.new-footer {
+    background-color: #285f63;
+    color: #ffffff;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 45px 20px;
+}
+
+.footer-column h3 {
+    margin-bottom: 20px;
+}
+
+.footer-column a {
+    display: block;
+    margin: 12px 0;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
+
+.footer-bottom h3 {
+    margin: 5px;
+}
+
+.footer-bottom p {
+    margin: 10px;
+}
+
+
+/* Authentication Page */
+
+.auth-page {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 290px;
+    padding: 40px 26px;
+    box-sizing: border-box;
+}
+
+
+/* Login */
+
+.login-box {
+    position: relative;
+    width: 275px;
+    min-height: 170px;
+    padding: 45px 25px 25px;
+    box-sizing: border-box;
+    border: 1px solid #7da5ff;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.login-box label {
+    display: block;
+    font-size: 12px;
+}
+
+.login-box input {
+    width: 100%;
+    height: 24px;
+    padding: 4px;
+    box-sizing: border-box;
+    border: 1px solid #dddddd;
+}
+
+.login-box button {
+    width: 100%;
+    margin-top: 8px;
+    padding: 8px;
+    background-color: #3979ff;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.login-box .signup-link {
+    position: absolute;
+    top: 16px;
+    right: 25px;
+    padding: 3px 8px;
+    border: 1px solid #7da5ff;
+    color: #3979ff;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+
+/* Registration */
+
+.register-box {
+    width: 365px;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #7da5ff;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+.register-box h2 {
+    margin: 0 0 20px;
+    color: #3979ff;
+    font-size: 18px;
+    text-align: center;
+}
+
+.register-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.register-box label {
+    display: block;
+    margin-top: 4px;
+    font-size: 12px;
+}
+
+.register-box input {
+    display: block;
+    width: 100%;
+    height: 25px;
+    padding: 4px;
+    box-sizing: border-box;
+    border: 1px solid #dddddd;
+}
+
+.register-box button {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    padding: 9px;
+    background-color: #3979ff;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.register-box p {
+    font-size: 12px;
+}
+
+.register-box .auth-message {
+    color: #cc0000;
+}
+
+
+/* Authentication Layout */
+
+.auth-panels {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 40px;
+    padding: 40px 25px;
+    background-color: #000000;
+}
+
+.auth-panels .auth-page {
+    flex: 1;
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+}
+
+.auth-panels .login-box {
+    width: 100%;
+    max-width: 330px;
+    margin: 0 auto;
+}
+
+.auth-panels .register-box {
+    width: 100%;
+    max-width: 365px;
+    margin: 0 auto;
+}
+
+
+/* New Post Page */
+
+.post-page {
+    max-width: 850px;
+    margin: 45px auto;
+    padding: 32px;
+    box-sizing: border-box;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.post-page h1 {
+    margin: 0 0 25px;
+    padding: 22px 26px;
+    background-color: #245b60;
+    color: #ffffff;
+    border-radius: 10px;
+    font-size: 28px;
+}
+
+.post-page h2 {
+    margin: 20px 0;
+    padding: 15px 20px;
+    background-color: #303030;
+    color: #ffffff;
+    border-radius: 8px;
+    font-size: 21px;
+}
+
+.post-page h3 {
+    margin: 20px 0 14px;
+    color: #ffffff;
+    font-size: 19px;
+}
+
+
+/* Question and Article Selection */
+
+.post-type-selection {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 20px 0 30px;
+}
+
+.post-type-selection label {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px;
+    background-color: #292929;
+    color: #ffffff;
+    border: 2px solid #555555;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.post-type-selection label:hover,
+.post-type-selection label:has(input:checked) {
+    background-color: #244b4d;
+    color: #ffffff;
+    border-color: #4ca3a8;
+}
+
+.post-type-selection input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #28767a;
+    cursor: pointer;
+}
+
+
+/* Post Form */
+
+.post-page form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.post-page form label {
+    margin-top: 10px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.post-page form input,
+.post-page form textarea {
+    display: block;
+    width: 100%;
+    padding: 14px 16px;
+    box-sizing: border-box;
+    background-color: #282828;
+    color: #ffffff;
+    border: 1px solid #555555;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    transition: border-color 0.2s ease;
+}
+
+.post-page form input::placeholder,
+.post-page form textarea::placeholder {
+    color: #aaaaaa;
+}
+
+.post-page form input:focus,
+.post-page form textarea:focus {
+    outline: none;
+    border-color: #28767a;
+    box-shadow: 0 0 0 3px rgba(40, 118, 122, 0.12);
+}
+
+.post-page form textarea {
+    min-height: 150px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.post-page form small {
+    margin-top: -5px;
+    color: #bbbbbb;
+    font-size: 12px;
+}
+
+
+/* Post Button */
+
+.post-page form button {
+    align-self: flex-end;
+    margin-top: 15px;
+    padding: 13px 42px;
+    background-color: #245b60;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.post-page form button:hover {
+    background-color: #174448;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+    .card-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 750px) {
+    .auth-panels {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .auth-panels .auth-page {
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    nav {
+        flex-wrap: wrap;
+        min-height: 65px;
+        padding: 12px 15px;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .signup form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .signup input {
+        width: 80%;
+        box-sizing: border-box;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    #about img,
+    .about img {
+        width: 210px;
+        height: 210px;
+    }
+
+    .post-page {
+        margin: 20px 12px;
+        padding: 18px;
+    }
+
+    .post-page h1 {
+        font-size: 21px;
+    }
+
+    .post-page h2 {
+        font-size: 18px;
+    }
+
+    .post-type-selection {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .post-page form button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .article-card img {
+        height: 220px;
+    }
+
+    .tutorials-section .article-card img {
+        height: auto;
+    }
+
+    .article-card h3 {
+        font-size: 19px;
+    }
+
+    .featured-section {
+        padding: 35px 15px;
+    }
+}
+
+
+/* See All Buttons */
+
+.see-all-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.see-all-button {
+  padding: 12px 28px;
+  background-color: #285f63;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.see-all-button:hover {
+  background-color: #397f83;
+}
+
+.see-all-message {
+  margin-top: 20px;
+  text-align: center;
+  color: #cccccc;
+}
+
+
+/* Footer Social Media Icons */
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 30px;
+  align-items: start;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  min-width: 0;
+}
+
+.footer-column h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 24px;
+  text-align: left;
+}
+
+.footer-column > a {
+  display: block;
+  margin: 0 0 14px;
+  padding: 0;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: left;
+}
+
+.footer-column > a:hover {
+  text-decoration: underline;
+}
+
+.footer-column .social-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-column .social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 22px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.footer-column .social-icons a:hover {
+  transform: translateY(-3px);
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 40px 24px;
+  }
+
+  .footer-column {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+
+/* Compact New Post Page */
+
+.post-page {
+  max-width: 800px;
+  width: 90%;
+  margin: 30px auto;
+}
+
+.post-container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 25px;
+}
+
+/* Smaller form fields */
+.post-container input,
+.post-container textarea,
+.post-container select {
+  padding: 10px 14px;
+  font-size: 14px;
+}
+
+/* Compact headings */
+.post-container h1 {
+  font-size: 26px;
+  margin-bottom: 18px;
+}
+
+.post-container h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+/* Reduce spacing */
+.post-container .form-group {
+  margin-bottom: 16px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .post-page,
+  .post-container {
+    width: 95%;
+    padding: 16px;
+  }
+}
